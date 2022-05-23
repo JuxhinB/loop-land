@@ -1,11 +1,19 @@
-import React from 'react'
+import layouts from "../../layouts";
+import homeComponents from "./components";
 
-type HomeProps = {}
+type HomeProps = {};
 
 function Home({}: HomeProps) {
   return (
-    <div>Home</div>
-  )
+    <layouts.General>
+      <>
+        <homeComponents.Hero />
+        <homeComponents.Calendar />
+        <homeComponents.Content />
+        <homeComponents.TeamMembers />
+      </>
+    </layouts.General>
+  );
 }
 
-export default Home
+export default Home;

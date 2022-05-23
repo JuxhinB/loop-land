@@ -1,11 +1,19 @@
-import React from 'react'
+import modules from "../../modules";
 
-type GeneralProps = {}
+type GeneralProps = {
+  children: JSX.Element;
+};
 
-function General({}: GeneralProps) {
+function General({ children }: GeneralProps) {
   return (
-    <div>General</div>
-  )
+    <div className="page-container">
+      <div className="content-container">
+        <modules.Header />
+        {children}
+        <modules.Footer />
+      </div>
+    </div>
+  );
 }
 
-export default General
+export default General;

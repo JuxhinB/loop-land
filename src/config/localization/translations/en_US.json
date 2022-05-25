@@ -1,0 +1,19 @@
+{
+  "LABEL": {},
+  "ACTION": {},
+  "MESSAGE": {},
+  "ERROR": {
+    "error": "Error"
+  },
+  "module": {
+    "footer": {
+      "copyright": "© {year}. Segel-Team. Alle Rechte vorbehalten",
+      "links": {
+        "impressum": "Impressum",
+        "datenschutz": "Datenschutz",
+        "rechtliches": "Rechtliches",
+        "copyright": "Copyright"
+      }
+    }
+  }
+}

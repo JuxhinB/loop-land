@@ -1,0 +1,11 @@
+.icon-wrap {
+  @include flex($justify: center, $align: center);
+
+  width: 40px;
+  height: 40px;
+
+  img {
+    max-width: 35px;
+    max-height: 35px;
+  }
+}

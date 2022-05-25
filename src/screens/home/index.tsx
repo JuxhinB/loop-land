@@ -9,7 +9,7 @@ function Home({}: HomeProps) {
       <>
         <homeComponents.Hero />
         <homeComponents.Calendar />
-        <homeComponents.Content />
+        <homeComponents.Info />
         <homeComponents.TeamMembers />
       </>
     </layouts.General>

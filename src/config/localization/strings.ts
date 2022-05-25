@@ -8,6 +8,14 @@ type Strings = LocalizedStringsMethods & {
   module: {
     footer: any;
   };
+  screen: {
+    home: {
+      hero: any;
+      calendar: any;
+      info: any;
+      teamMembers: any;
+    };
+  };
 };
 
 let strings: Strings = new LocalizedStrings({

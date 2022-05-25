@@ -1,0 +1,90 @@
+.info {
+  &-container {
+    @include flex($f-dir: column, $justify: center, $align: center);
+    width: 100%;
+    padding: 30px;
+
+    & > {
+      width: 100%;
+    }
+    // border: 1px solid red;
+  }
+
+  &-title,
+  &-subtitle {
+    color: #000000;
+  }
+
+  &-title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  &-subtitle {
+    padding: 0 50px 15px;
+    margin-bottom: 50px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #bbbbbb;
+  }
+
+  &-content {
+    @include flex();
+
+    font-size: 15px;
+    line-height: 1.5;
+    color: #727272;
+
+    &_item {
+      width: 50%;
+
+      &:nth-child(odd) {
+        padding-right: 15px;
+      }
+      &:nth-child(even) {
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .info {
+    &-container {
+      padding: 15px;
+    }
+
+    &-title {
+      margin-top: 30px;
+      font-size: 28px;
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      padding: 0 30px 5px;
+      margin-bottom: 30px;
+    }
+
+    &-content {
+      flex-wrap: wrap;
+
+      &_item {
+        width: 100%;
+
+        &:nth-child(odd) {
+          padding: 0;
+        }
+
+        &:nth-child(even) {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

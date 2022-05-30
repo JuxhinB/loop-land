@@ -1,0 +1,248 @@
+.calendar {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 365px;
+
+    margin-top: -100px;
+
+    .calendar-dates-container,
+    .calendar-event-container {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #e5eaee;
+        z-index: -1;
+      }
+    }
+
+    .calendar-dates-container {
+      position: relative;
+
+      width: 50%;
+      display: flex;
+      align-items: flex-end;
+
+      overflow: hidden;
+
+      &::after {
+        transform: skewY(10deg);
+        transform-origin: top left;
+        background: linear-gradient(
+          90deg,
+          #e5eaee 0%,
+          #e5eaee 50%,
+          #000000 50%,
+          #000000 100%
+        );
+      }
+    }
+
+    .calendar-event-container {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+      &::after {
+        transform: skewY(-10deg);
+        transform-origin: top right;
+      }
+    }
+  }
+
+  &-date {
+    width: 50%;
+    padding: 20px;
+
+    &.dark {
+      .calendar-date_description {
+        color: #e5eaee;
+      }
+    }
+
+    &_pretitle-wrap {
+      margin-bottom: 15px;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    &_pretitle {
+      margin-left: 15px;
+
+      font-weight: bold;
+      color: #717171;
+      text-transform: uppercase;
+    }
+
+    &_title {
+      margin-bottom: 15px;
+
+      font-size: 20px;
+      font-weight: bold;
+      color: #c4132f;
+      text-transform: uppercase;
+    }
+
+    &_description {
+      font-size: 15px;
+      line-height: 1.4;
+      color: #000000;
+    }
+  }
+
+  &-event {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: 100%;
+    padding: 40px;
+
+    &_date {
+      margin-bottom: 15px;
+
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000000;
+    }
+
+    &_title {
+      margin-bottom: 5px;
+
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #c4132f;
+    }
+
+    &_subtitle {
+      margin-bottom: 10px;
+
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    &_description {
+      max-width: 90%;
+
+      font-size: 16px;
+      line-height: 1.4;
+      color: #000000;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .calendar {
+    &-container {
+      min-height: unset;
+
+      margin-top: 0;
+
+      .calendar-dates-container,
+      .calendar-event-container {
+        &::after {
+          background-color: #e5eaee;
+          z-index: -1;
+        }
+      }
+
+      .calendar-dates-container {
+        width: 100%;
+        order: 2;
+
+        &::after {
+          transform: skewY(0deg);
+        }
+      }
+
+      .calendar-event-container {
+        width: 100%;
+        order: 1;
+        &::after {
+          transform: skewY(0deg);
+        }
+      }
+    }
+
+    &-date {
+      width: 50%;
+      padding: 20px;
+
+      &_pretitle-wrap {
+        margin-bottom: 10px;
+      }
+
+      &_pretitle {
+        margin-left: 5px;
+        margin-bottom: 5px;
+      }
+
+      &_title {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      &_description {
+        font-size: 15px;
+      }
+    }
+
+    &-event {
+      padding: 20px;
+
+      &_date {
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+
+      &_title {
+        font-size: 18px;
+      }
+
+      &_subtitle {
+        margin-bottom: 5px;
+
+        font-size: 16px;
+      }
+      &_description {
+        max-width: 1000%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    &-container {
+      .calendar-dates-container {
+        flex-wrap: wrap;
+
+        &::after {
+          background: linear-gradient(
+            180deg,
+            #e5eaee 0%,
+            #e5eaee 50%,
+            #000000 50%,
+            #000000 100%
+          );
+        }
+      }
+    }
+
+    &-date {
+      width: 100%;
+    }
+  }
+}

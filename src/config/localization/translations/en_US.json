@@ -36,6 +36,10 @@
           "subtitle": "Subtitle",
           "description": "Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.  Aenean sollicitudin, lorem quis bibendum auctor."
         }
+      },
+      "hero": {
+        "title": "LOREM IPSUM PROIN GRAVI",
+        "subtitle": "Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem"
       }
     }
   }

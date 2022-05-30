@@ -31,7 +31,7 @@
       overflow: hidden;
 
       &::after {
-        transform: skewY(10deg);
+        transform: skewY(7deg);
         transform-origin: top left;
         background: linear-gradient(
           90deg,
@@ -48,7 +48,7 @@
       width: 50%;
       overflow: hidden;
       &::after {
-        transform: skewY(-10deg);
+        transform: skewY(-7deg);
         transform-origin: top right;
       }
     }
@@ -57,11 +57,8 @@
   &-date {
     width: 50%;
     padding: 20px;
-    background-color: #e5eaee;
 
     &.dark {
-      background-color: #000000;
-
       .calendar-date_description {
         color: #e5eaee;
       }
@@ -186,6 +183,12 @@
     &-date {
       width: 50%;
       padding: 20px;
+
+      background-color: #e5eaee;
+
+      &.dark {
+        background-color: #000000;
+      }
 
       &_pretitle-wrap {
         margin-bottom: 10px;

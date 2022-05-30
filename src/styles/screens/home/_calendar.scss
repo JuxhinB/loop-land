@@ -57,8 +57,11 @@
   &-date {
     width: 50%;
     padding: 20px;
+    background-color: #e5eaee;
 
     &.dark {
+      background-color: #000000;
+
       .calendar-date_description {
         color: #e5eaee;
       }
@@ -164,6 +167,10 @@
 
         &::after {
           transform: skewY(0deg);
+
+          &::after {
+            background: linear-gradient(180deg, #e5eaee 0%, #e5eaee 100%);
+          }
         }
       }
 
@@ -228,16 +235,6 @@
     &-container {
       .calendar-dates-container {
         flex-wrap: wrap;
-
-        &::after {
-          background: linear-gradient(
-            180deg,
-            #e5eaee 0%,
-            #e5eaee 50%,
-            #000000 50%,
-            #000000 100%
-          );
-        }
       }
     }
 

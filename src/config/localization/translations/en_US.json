@@ -6,6 +6,15 @@
     "error": "Error"
   },
   "module": {
+    "header":{
+      "menu":{
+        "home": "Home",
+        "about": "About Us",
+        "gallery": "Gallery",
+        "crew": "Crew",
+        "contact": "kontact"
+      }
+    },
     "footer": {
       "copyright": "© {year}. Segel-Team. Alle Rechte vorbehalten",
       "links": {

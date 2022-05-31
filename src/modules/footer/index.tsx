@@ -1,5 +1,4 @@
 import strings from "../../config/localization/strings";
-//
 import components from "../../components";
 import assets from "../../assets";
 

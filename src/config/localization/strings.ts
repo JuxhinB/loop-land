@@ -7,6 +7,15 @@ type Strings = LocalizedStringsMethods & {
   ERROR: any;
   module: {
     footer: any;
+    header: {
+      menu: {
+        home: string;
+        about: string;
+        gallery: string;
+        crew: string;
+        contact: string;
+      };
+    };
   };
   screen: {
     home: {

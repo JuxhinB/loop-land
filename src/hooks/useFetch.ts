@@ -64,7 +64,7 @@ function useFetch<RequestParams, Response>(stdUrl: string) {
         return;
       }
     })();
-  }, [promise]);
+  }, [promise, result]);
 
   function getData({ data, urlEncoded, headers }: Params<RequestParams>): any {
     if (loading) return;

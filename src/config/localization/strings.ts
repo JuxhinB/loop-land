@@ -22,7 +22,15 @@ type Strings = LocalizedStringsMethods & {
       hero: any;
       calendar: any;
       info: any;
-      teamMembers: any;
+      teamMembers: {
+        filter: {
+          all: string
+          trim: string
+          tactic: string
+          helmsman: string
+          loadMore: string
+        }
+      }
     };
   };
 };

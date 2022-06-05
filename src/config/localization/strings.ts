@@ -23,6 +23,8 @@ type Strings = LocalizedStringsMethods & {
       calendar: any;
       info: any;
       teamMembers: {
+        title: string;
+        subtitle: string;
         filter: {
           all: string
           trim: string

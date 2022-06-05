@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useEffect, useState } from "react";
 //
 import api from "../../../api";
@@ -47,7 +48,7 @@ function TeamMembers({}: TeamMembersProps) {
   useEffect(() => {
     fetchCrew({
       page: 1,
-      limit: 10,
+      limit: 5,
       ...(selectedCrewDuty !== "all" && { duty: selectedCrewDuty }),
     });
   }, [selectedCrewDuty, fetchCrew]);
@@ -59,7 +60,7 @@ function TeamMembers({}: TeamMembersProps) {
       if (nextPage <= crewPagination.total_pages) {
         fetchCrew({
           page: nextPage,
-          limit: 10,
+          limit: 5,
         });
       }
     }
@@ -87,6 +88,13 @@ function TeamMembers({}: TeamMembersProps) {
 
   return (
     <div className="team-members-container">
+      <h3 className="team-members_title">
+        {strings.screen.home.teamMembers.title}
+      </h3>
+      <h4 className="team-members_subtitle">
+        {strings.screen.home.teamMembers.subtitle}
+      </h4>
+
       <div className="team-members_filters">
         <button
           className={`team-members_filters-item ${
@@ -124,13 +132,6 @@ function TeamMembers({}: TeamMembersProps) {
         >
           {strings.screen.home.teamMembers.filter.helmsman}
         </button>
-        <button
-          className={`team-members_filters-item`}
-          disabled={getCrewLoading}
-          onClick={loadMoreOnClick}
-        >
-          {strings.screen.home.teamMembers.filter.loadMore}
-        </button>
       </div>
 
       <div className="team-members_images">
@@ -142,6 +143,16 @@ function TeamMembers({}: TeamMembersProps) {
             <TeamMemberItem alt="" src={crew.image} {...crew} />
           </div>
         ))}
+      </div>
+
+      <div className="team-members_actions">
+        <button
+          className={`team-members_actions-item`}
+          disabled={getCrewLoading}
+          onClick={loadMoreOnClick}
+        >
+          {strings.screen.home.teamMembers.filter.loadMore}
+        </button>
       </div>
     </div>
   );
